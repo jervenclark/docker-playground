@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "docker"
 
   config.vm.network :private_network, ip: "192.168.3.14"
-  config.vm.synced_folder ".", "/vagrant", type: "nfs", create: true
+  config.vm.synced_folder ".", "/vagrant"
 
   config.vm.hostname = "Docker-Playground"
   config.vm.provider :virtualbox do |vb|
